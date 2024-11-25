@@ -1,0 +1,97 @@
+esphome:
+  name: PRESENCIA-HLK-2420_ESP32SM #Cambia el nombre por el que desees
+  friendly_name: Presencia #Pon el nombre que desees
+
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: arduino
+
+logger:
+
+api:
+  encryption:
+    key: !secret api_key_presencia
+
+ota:
+  - platform: esphome
+    password: !secret ota_presencia
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  fast_connect: True
+  power_save_mode: NONE
+  
+  #Configuración con IP fija. Has de poner los datos de tu red.
+  manual_ip: 
+    static_ip: 192.168.1.?
+    gateway: 192.168.1.?
+    subnet: 255.255.255.0
+
+  ap:
+    ssid: "Presencia_Despacho"
+    password: !secret wifi_ap_password
+
+captive_portal:
+
+uart:
+  id: presencia
+  tx_pin: GPIO20  
+  rx_pin: GPIO21  
+  baud_rate: 115200
+  parity: NONE
+  stop_bits: 1   
+
+ld2420:
+
+web_server:
+  port: 80
+
+text_sensor:
+  - platform: ld2420
+    fw_version:
+      name: LD2420 Firmware
+
+sensor:
+  - platform: ld2420
+    moving_distance:
+      name : Moving Distance
+  - platform: internal_temperature
+    name: "Internal Temperature"
+
+binary_sensor:
+  - platform: ld2420
+    has_target:
+      name: Presence
+
+select:
+  - platform: ld2420
+    operating_mode:
+      name: Operating Mode
+
+number:
+  - platform: ld2420
+    presence_timeout:
+      name: Detection Presence Timeout
+    min_gate_distance:
+      name: Detection Gate Minimum
+    max_gate_distance:
+      name: Detection Gate Maximum
+    gate_select:
+      name: Select Gate to Set
+    still_threshold:
+      name: Set Still Threshold Value
+    move_threshold:
+      name: Set Move Threshold Value
+
+button:
+  - platform: ld2420
+    apply_config:
+      name: Apply Config
+    factory_reset:
+      name: Factory Reset
+    restart_module:
+      name: Restart Module
+    revert_config:
+      name: Undo Edits
