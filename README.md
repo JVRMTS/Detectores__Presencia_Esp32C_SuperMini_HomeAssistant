@@ -6,5 +6,7 @@
 del sensor que estés utilizando, no se si es por una mala definición de los pines en las placas que tengo o por un error en la definición de estos, 
 el caso es que así funcionan los dos.</p>
 
-<p>También he realizado dos bocetos en Fritzing con para ponerlos en funcionamiento, tiene la PCB diseñada con una fuente de alimentación de 5V
+<p>También he realizado dos bocetos en Fritzing para ponerlos en funcionamiento, tiene la PCB diseñada con una fuente de alimentación de 5V
 , actualmente los tengo los dos funcionando.</p>
+
+<P>Los dos tienen una fuente de alimentación HLK-PM01 de 5V y 0.6A se alimentan a 220V</P>
