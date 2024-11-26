@@ -1,4 +1,4 @@
-<h1>DETECTORES DE PRESENCIA UTILIZANDO ESP32C3 SUPER MINI Y LD2410 Y LD2420 PARA ESPHOME</h1>
+<h1>DETECTORES DE PRESENCIA UTILIZANDO ESP32C3 SUPER MINI Y LD2410 Y LD2420 PARA ESPHOME Y HOMEASSISTANT</h1>
 <P>Despues de estar buscando como configurar los detectores de presencia HLK-LD2410 y HLK-LD2420 y ver que habia poca información,
   me dedique a realizar pruebas para intentar configurarlos, de esas pruebas llegan estos resultados:</P>
 
