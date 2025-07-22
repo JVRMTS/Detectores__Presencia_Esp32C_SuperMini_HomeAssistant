@@ -10,3 +10,5 @@ el caso es que así funcionan los dos.</p>
 
 <P>Los dos tienen una fuente de alimentación HLK-PM01 de 5V y 0.6A se alimentan a 220V de corriente alterna, pues tengo intención de colocarlos 
 pegados a los plafones que tengo y sacar la alimentación desde estos.</P>
+<h2>NOTA 22/7/25</h2>
+<p>El LD2420 me ha fallado al actualiarlo con la versión 2025.7.2 de ESPHOME, funciona con la versión 2025.6.3</p>
