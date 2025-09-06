@@ -37,8 +37,8 @@ captive_portal:
 
 uart:
   id: presencia
-  tx_pin: GPIO20  
-  rx_pin: GPIO21  
+  tx_pin: GPIO07
+  rx_pin: GPIO06
   baud_rate: 115200
   parity: NONE
   stop_bits: 1   
