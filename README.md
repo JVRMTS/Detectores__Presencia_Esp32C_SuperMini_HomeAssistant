@@ -14,3 +14,5 @@ pegados a los plafones que tengo y sacar la alimentación desde estos.</P>
 <p>El LD2420 me ha fallado al actualiarlo con la versión 2025.7.2 de ESPHOME, funciona con la versión 2025.6.3</p>
 <h2>NOTA 06/09/2025</h2>
 <p>Desde la actualización 2025.7.2 de ESPHOME dejó de funcionar si se actualizaba por encima de esa versión de ESPHOME, para que funcione hay que con las versiones iguales o superiores a esa hay que cambiar los pines a los que se conecta el HLK-LD2024 - tx_pin: GPIO07 y rx_pin: GPIO06, con la configuración antigua daba problemas con el puerto USB.</p>
+<h2>NOTA 08/09/2025</h2>
+<p>Despues de hacer varias pruebas me he dado cuenta de que, aparte de cambiar los pines, tambien hay que cortar la corriente al circuito para que funcione, pues cuando se reinicia tras la actualización da error y cuando se le corta la corriente funciona correctamente.</p>
