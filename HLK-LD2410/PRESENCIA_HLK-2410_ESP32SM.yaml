@@ -9,9 +9,9 @@ esp32:
 
 logger:
 
-api:
-  encryption:
-    key: !secret api_key_presencia
+ota:
+  - platform: esphome
+    encryption:
 
 ota:
   - platform: esphome
